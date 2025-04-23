@@ -9,8 +9,8 @@ pipeline {
 
     parameters {
         choice(name: 'InputMode', choices: ['playbookIds', 'filterDateRange'], description: 'Choose how to fetch test results')
-        string(name: 'ScriptToRun', defaultValue: '', description: 'Comma-separated Playbook IDs (if InputMode = playbookIds)')
-        string(name: 'filterId', defaultValue: '', description: 'Filter ID (if InputMode = filterDateRange)')
+        string(name: 'ScriptToRun', description: 'Playbook IDs — only used if InputMode is playbookIds')
+        string(name: 'filterId', description: 'Filter ID — only used if InputMode is filterDateRange')
         string(name: 'start_date', defaultValue: '', description: 'Start Date (yyyy-MM-dd)')
         string(name: 'end_date', defaultValue: '', description: 'End Date (yyyy-MM-dd)')
     }
